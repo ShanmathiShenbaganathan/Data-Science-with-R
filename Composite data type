@@ -1,0 +1,109 @@
+> data=c("vvv","eee","yyy")
+> data
+[1] "vvv" "eee" "yyy"
+> class(data)
+[1] "character"
+> 
+> u=list(45,56,87)
+> u
+[[1]]
+[1] 45
+
+[[2]]
+[1] 56
+
+[[3]]
+[1] 87
+
+> u=list(c(56,45,37))
+> u
+[[1]]
+[1] 56 45 37
+
+> u=list(c(45,"rrr",67),56.8,"good")
+> u
+[[1]]
+[1] "45"  "rrr" "67" 
+
+[[2]]
+[1] 56.8
+
+[[3]]
+[1] "good"
+
+> 
+> thismatrix=matrix(c(1,2,3,4,5,6),nrow=3,ncol=2)
+> thismatrix
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+> thismatrix=matrix((1,2,3,4,5,6,),nrow=3,ncol=2)
+Error: unexpected ',' in "thismatrix=matrix((1,"
+> data=c(1,2,3,"eee")
+> data
+[1] "1"   "2"   "3"   "eee"
+> a=matrix(c(1,2,3,4,5,6,7,8,),nrow=4,ncol=4)
+Error in c(1, 2, 3, 4, 5, 6, 7, 8, ) : argument 9 is empty
+> a=matrix(c(1,2,3,4,5,6,7,8),nrow=4,ncol=4)
+> a
+     [,1] [,2] [,3] [,4]
+[1,]    1    5    1    5
+[2,]    2    6    2    6
+[3,]    3    7    3    7
+[4,]    4    8    4    8
+> 
+> h=list(22,33,44,55,67,11)
+> h[2]
+[[1]]
+[1] 33
+
+> length(h)
+[1] 6
+> 54->h[3]
+> h
+[[1]]
+[1] 22
+
+[[2]]
+[1] 33
+
+[[3]]
+[1] 54
+
+[[4]]
+[1] 55
+
+[[5]]
+[1] 67
+
+[[6]]
+[1] 11
+
+> apphend(h,70)
+Error in apphend(h, 70) : could not find function "apphend"
+> aphend(h,89)
+Error in aphend(h, 89) : could not find function "aphend"
+> append(h,89)
+[[1]]
+[1] 22
+
+[[2]]
+[1] 33
+
+[[3]]
+[1] 54
+
+[[4]]
+[1] 55
+
+[[5]]
+[1] 67
+
+[[6]]
+[1] 11
+
+[[7]]
+[1] 89
+
+> 
