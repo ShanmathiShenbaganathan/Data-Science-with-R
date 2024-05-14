@@ -14,3 +14,34 @@
 > class(a)
 [1] "character"
 > 
+> a="success"
+> b="good"
+> a
+[1] "success"
+> b
+[1] "good"
+> class(a)
+[1] "character"
+> 
+> 
+> z=5+3l
+Error: unexpected symbol in "z=5+3l"
+> z=5+3i
+> class(z)
+[1] "complex"
+> c=2+3
+> class(c)
+[1] "numeric"
+> a=34.3
+> b=as.integer(a)
+> a
+[1] 34.3
+> b
+[1] 34
+> class(a)
+[1] "numeric"
+> class(b)
+[1] "integer"
+> is.integer(b)
+[1] TRUE
+> 
