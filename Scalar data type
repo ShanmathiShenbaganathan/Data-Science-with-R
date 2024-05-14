@@ -1,0 +1,16 @@
+5!=2
+[1] TRUE
+> a=5.2
+> class(a)
+[1] "numeric"
+> b=as.integer(a)
+> b
+[1] 5
+> class(b)
+[1] "integer"
+> is.integer(b)
+[1] TRUE
+> a="dhgfwhfgh"
+> class(a)
+[1] "character"
+> 
