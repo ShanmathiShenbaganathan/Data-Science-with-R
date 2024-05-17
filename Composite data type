@@ -150,3 +150,103 @@ Levels: apples grapes oranges
 [1] male   female male   female
 Levels: male female transgender
 > 
+> data<-data.frame(id=c(1:5),name=c("gojo","rengoku","eren","mikasa","levi"))
+> data
+  id    name
+1  1    gojo
+2  2 rengoku
+3  3    eren
+4  4  mikasa
+5  5    levi
+> data$location=c("shibuya","edo","kiyoto","tokyo","Shinjuku")
+> data
+  id    name location
+1  1    gojo  shibuya
+2  2 rengoku      edo
+3  3    eren   kiyoto
+4  4  mikasa    tokyo
+5  5    levi Shinjuku
+> str(data)
+'data.frame':	5 obs. of  3 variables:
+ $ id      : int  1 2 3 4 5
+ $ name    : chr  "gojo" "rengoku" "eren" "mikasa" ...
+ $ location: chr  "shibuya" "edo" "kiyoto" "tokyo" ...
+> summary(data)
+       id        name             location        
+ Min.   :1   Length:5           Length:5          
+ 1st Qu.:2   Class :character   Class :character  
+ Median :3   Mode  :character   Mode  :character  
+ Mean   :3                                        
+ 3rd Qu.:4                                        
+ Max.   :5                                        
+> r=data.frame(data$name)
+> r
+  data.name
+1      gojo
+2   rengoku
+3      eren
+4    mikasa
+5      levi
+> r1=data.frame(data$location)
+> r1
+  data.location
+1       shibuya
+2           edo
+3        kiyoto
+4         tokyo
+5      Shinjuku
+> r2=data.frame(data$id)
+> r2
+  data.id
+1       1
+2       2
+3       3
+4       4
+5       5
+> data[['name']]
+[1] "gojo"    "rengoku" "eren"    "mikasa"  "levi"   
+> data[['data$location']]
+NULL
+> data[['location']]
+[1] "shibuya"  "edo"      "kiyoto"   "tokyo"    "Shinjuku"
+> dim(data)
+[1] 5 3
+> data=rbind(data,c("armin","china"))
+Warning message:
+In rbind(deparse.level, ...) :
+  number of columns of result, 3, is not a multiple of vector length 2 of arg 2
+> data=rbind(data,c(6,"armin","china"))
+> data
+     id    name location
+1     1    gojo  shibuya
+2     2 rengoku      edo
+3     3    eren   kiyoto
+4     4  mikasa    tokyo
+5     5    levi Shinjuku
+6 armin   china    armin
+7     6   armin    china
+> 
+> data=rbind(data,c(7,"armin","china"))
+> data
+     id    name location
+1     1    gojo  shibuya
+2     2 rengoku      edo
+3     3    eren   kiyoto
+4     4  mikasa    tokyo
+5     5    levi Shinjuku
+6 armin   china    armin
+7     6   armin    china
+8     7   armin    china
+> data<-rbind(data,c(7,"armin","china"))
+> data
+     id    name location
+1     1    gojo  shibuya
+2     2 rengoku      edo
+3     3    eren   kiyoto
+4     4  mikasa    tokyo
+5     5    levi Shinjuku
+6 armin   china    armin
+7     6   armin    china
+8     7   armin    china
+9     7   armin    china
+> 
