@@ -250,3 +250,31 @@ In rbind(deparse.level, ...) :
 8     7   armin    china
 9     7   armin    china
 > 
+
+> data=data.frame(name=c("a","b","c"))
+> data
+  name
+1    a
+2    b
+3    c
+> data$location=c("va","fa","ca")
+> data
+  name location
+1    a       va
+2    b       fa
+3    c       ca
+> data=rbind(data,c("d","nj"))
+> data
+  name location
+1    a       va
+2    b       fa
+3    c       ca
+4    d       nj
+> r1=data.frame(data$location)
+> r1
+  data.location
+1            va
+2            fa
+3            ca
+4            nj
+> 
