@@ -1,0 +1,21 @@
+x=c(12,23,34,45,56)
+names(x)=c("C","c++","Java","Python","R")
+library(plotrix)
+pie3D(x,labels=names(x),main="Pie Chart",col="red",col.main="blue")
+
+plot(1,3)
+plot(c(1,5),c(4,8))
+
+x=c(1,2,3,4,5)
+y=c(7,8,9,10,11)
+plot(x,y)
+
+plot(1:10)
+plot(1:10,type='l',col="red")
+plot(1:10 ,col="red",pch=7,cex=1)
+
+x=c(12,34,65,78,45)
+names(x)=c("C","C++","Java","python","R")
+pie(x,labels=names(x),main="pie chart",col="green",col.main="blue")
+
+barplot(x,xlab="data",ylab="count",main="Bar Plot",col="blue",col.axis="green",col.main="Red")
