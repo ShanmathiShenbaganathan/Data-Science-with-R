@@ -1,0 +1,17 @@
+x=seq(-15,15,by=0.3)
+x
+y=dnorm(x,mean(x),sd(x))
+plot(x,y)
+
+x=seq(-15,15,by=0.1)
+x
+y=pnorm(x,mean=2.5,sd=2)
+plot(x,y)
+
+x=seq(0,2,by=0.1)
+x
+y=qnorm(x,mean(x),sd=(x))
+plot(x,y)
+
+x=rnorm(1000,mean=200,sd=15)
+hist(x,breaks=10)
