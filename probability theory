@@ -1,0 +1,13 @@
+coin=c("heads","tails","tails","tails")
+total= length(coin)
+outcomes=length(coin[coin=="heads"])
+outcomes
+prob=outcomes/total
+prob
+
+card=rep(c("hearts","spades","diamonds","clubs"),each=13)
+total=length(card)
+outcomes=length(card[card=="diamonds"])
+outcomes
+prob=outcomes/total
+prob
