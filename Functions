@@ -1,0 +1,24 @@
+checkprob=function(a,b){
+  return(a*b)
+}
+r=checkprob(12,2)
+r
+r=checkprob(1,2)
+r
+
+checkprob=function(a,b){
+  if(a>b){
+    return("a is bigger")
+  }
+  else if(a==b){
+    return("a is equal to b")
+  }
+  else{
+    return("a is least")
+  }
+}
+r=checkprob(2,24)
+r
+
+r=checkprob(12,3)
+r
