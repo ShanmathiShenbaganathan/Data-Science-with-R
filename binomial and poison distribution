@@ -1,0 +1,9 @@
+dbinom(4,size=12,prob=1/6)
+plot(0:10,pbinom(0:10,size=10,prob=1/6),type="l")
+qbinom(0.5,size=13,prob=1/6)
+rbinom(8,size=12,prob=1/6)
+
+x=3
+lambda=2
+probability=dpois(x,lambda)
+print(probability)
