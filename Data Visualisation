@@ -1,0 +1,13 @@
+airquality
+barplot(airquality$Ozone,main="ozone",col="yellow",xlab="ozone")
+barplot(airquality$Ozone,main="ozone",col="yellow",xlab="ozone",horiz=TRUE)
+hist(airquality$Temp,main="temperatures at different area",col="green",xlab="temp(F)",xlim=c(20,125))
+boxplot(airquality$Wind,main="wind",xlab="miles per hour",ylab="wind",notch=TRUE,horizontal=TRUE,col="orange",border="brown")
+
+library(moments)
+x=c(10,11,21,22,23,25)
+print(skewness(x))
+
+library(moments)
+x=rnorm(100)
+print(kurtosis(x))
