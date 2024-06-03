@@ -1,0 +1,6 @@
+a=c(6,5,4,12,14,5,3)
+mean(a)
+sd(a)
+a.z=(a-mean(a))/sd(a)
+a.z
+plot(a.z,type="o",col="blue")
