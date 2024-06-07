@@ -1,0 +1,19 @@
+mtcars
+data=mtcars
+head(data)
+Years_Exp=data$wt
+Salary=data$hp
+data=data.frame(Years_Exp,Salary)
+plot(data$Years_Exp,data$Salary,xlab="wt",ylab="hp",main="Plot using mtcars data")
+library(caTools)
+set.seed(123)
+split=sample.split(data$Salary,SplitRatio=0.7)
+trainingset=subset(data,split==TRUE)
+testset=subset(data,split==FALSE)
+lm.r=lm (formula=Salary~Years_Exp,data=trainingset)
+summary(lm.r)
+new_data=data.frame(Years_Exp=c(2.1,2.2,2.3,2.4))
+predictedsalaries=predict(lm.r,data=new_data)
+predictedsalaries
+library(ggplot2)
+ggplot()+geom_point(aes(x=trainingset$Years_Exp,y=trainingset$Salary),colour="red")+geom_line(aes(x=trainingset$Years_Exp,y=predict(lm.r,data=trainingset)),colour="blue")+ggtitle("Plot for mtcars")+xlab("Years_Exp(wt)")+ylab("Salary(hp)")
