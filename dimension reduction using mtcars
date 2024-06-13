@@ -1,0 +1,7 @@
+library(ggplot2)
+library(dplyr)
+library(ggfortify)
+data(mtcars)
+pca_result=prcomp(mtcars,center=TRUE,scale.=TRUE)
+print(summary(pca_result))
+autoplot(pca_result,data=mtcars,loadings=TRUE,loadings.label=TRUE,loading.label.size=3)
